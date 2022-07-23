@@ -1,0 +1,14 @@
+name: 'Global variables'
+description: 'Configures global variables'
+
+runs:
+  using: "composite"
+  steps:
+    
+    # Create the environment variable SERVER_NAME
+    - run: echo "SERVER_NAME=prod.my-app.com" >> $GITHUB_ENV
+      shell: bash
+
+    # Create the environment variable PORT_NUMBER
+    - run: echo "PORT_NUMBER=8024" >> $GITHUB_ENV
+      shell: bash
